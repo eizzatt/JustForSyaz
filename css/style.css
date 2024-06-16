@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: azure;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.greetings {
+    font-size: 6rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.greetings > span {
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        color: #ff00aa;
+        text-shadow: 0 0 12px #e5ff00, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+    10%, 90% {
+        color: #111;
+        text-shadow: none;
+    }
+}
+
+
+
+.description {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.button a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 564px) {
+    .greetings {
+        display: block;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .button a {
+        font-size: 0.5rem;
+    }
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #050404;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#cake-container {
+    position: top;
+    width: 100%;
+    height: 100%;
+}
+
+.cake {
+    position: absolute;
+    font-size: 20px;
+    top: -50px; /* Initial position outside the viewport */
+}
+
+@keyframes fall {
+    0% {
+        top: -50px;
+    }
+    100% {
+        top: calc(100vh - 50px);
+    }
+}
+
+.falling {
+    animation: fall 3s ease-in-out infinite;
+}
+
+
+
+
+
+
+
